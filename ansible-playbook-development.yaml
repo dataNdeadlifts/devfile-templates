@@ -17,7 +17,7 @@ components:
 commands:
   - id: pip-install
     exec:
-      commandLing: 'if [ -f requirements.txt ]; then pip install -r requirements.txt fi'
+      commandLine: 'if [ -f requirements.txt ]; then pip install -r requirements.txt fi'
       workingDir: ${PROJECT_SOURCE}
       group:
         kind: build

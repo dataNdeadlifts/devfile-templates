@@ -6,9 +6,10 @@ A set of personal [devfile](devfile.io) templates I use with [Eclispe Che](https
 
 You can do any of the following:
 
-- Directly open desired devfile in Eclipse Che
-- Copy the contents to your project and open in Eclipse Che
-- Source the file as a template in your own devfile
+- Copy the contents to your projects and open in Eclipse Che
+- Source the file as a parent in your own devfile
+```
+```
 
 ## Contributing
 
