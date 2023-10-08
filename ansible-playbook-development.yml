@@ -1,0 +1,28 @@
+schemaVersion: 2.2.0
+metadata:
+  name: ansible-template
+  tags:
+    - ansible
+    - automation
+  version: 0.0.1
+components:
+  - name: ansible
+    container:
+      image: quay.io/ansible/creator-ee:latest
+      memoryRequest: 256M
+      memoryLimit: 6Gi
+      cpuRequest: 250m
+      cpuLimit: 2000m
+      args: ['tail', '-f', '/dev/null']
+commands:
+  - id: pip-install
+    exec:
+      commandLing: 'if [ -f requirements.txt ]; then pip install -r requirements.txt fi'
+      workingDir: ${PROJECT_SOURCE}
+      group:
+        kind: build
+        isDefault: true
+      component: ansible
+events:
+  postStart:
+    - pip-install
