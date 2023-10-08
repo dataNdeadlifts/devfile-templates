@@ -7,8 +7,14 @@ A set of personal [devfile](devfile.io) templates I use with [Eclispe Che](https
 You can do any of the following:
 
 - Copy the contents to your projects and open in Eclipse Che
-- Source the file as a parent in your own devfile
+- Source the raw file as a parent in your own devfile
 ```
+schemaVersion: 2.2.0
+metadata:
+  name: ansible example
+parent:
+  uri: https://raw.githubusercontent.com/dataNdeadlifts/devfile-templates/feature/initial-ansible-devfile/ansible-playbook-development.yaml
+
 ```
 
 ## Contributing
